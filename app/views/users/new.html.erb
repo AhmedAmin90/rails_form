@@ -1,4 +1,4 @@
-<h1> Hello world </h1>
+<h1> User Form</h1>
 
 <%# <form accept-charset="UTF-8" action="/users" method="post" > %>
 <%# <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>
@@ -11,7 +11,7 @@
   <input type="submit" value="Submit">
 </form> %>
 
-
+<!--
 <%= form_tag("/users") do %>
  <%= label_tag(:username, "User Name") %>
  <%= text_field_tag(:username)%>
@@ -22,4 +22,24 @@
  <%= submit_tag("Sign Up") %>
 
 <% end %>
+
+-->
+
+<ul>
+
+<%= form_for @user do |f|%>
+<li> <%= f.label :username, "First Name"%> </li>
+<li> <%= f.text_field :username , placeholder: "Type your name here"%> </li>
+<li> <%= f.label :email, "Email"%> </li>
+<li> <%= f.text_field :email , placeholder: "example@example.com"%> </li>
+<li> <%= f.label :password, "Password"%> </li>
+<li> <%= f.password_field :password , placeholder: "Minimum 6 letters or numbers" %> </li>
+<li> <%= f.submit "Sign up"%> </li>
+<%end%>
+</ul>
+  <ul>
+      <% @user.errors.full_messages.each do |error| %>
+      <li class="error-msgs"><%= error %></li>
+      <% end %>
+    </ul>
 
