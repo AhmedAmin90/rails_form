@@ -1,18 +1,22 @@
 <h1> New User Form</h1>
-<!-- 
- <form accept-charset="UTF-8" action="users_path" method="post" > %>
-<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" >
-  <label for="username">User Name </label>
-  <input type="text" id="username" name="user[username]"><br><br>
-  <label for="email">User Email</label>
-  <input type="email" id="email" name="user[email]"><br><br>
-   <label for="password">Password</label>
-  <input type="password" id="password" name="user[password]"><br><br>
-  <input type="submit" value="Submit">
-</form> 
--->
-<!--
-<%= form_tag("/users") do %>
+
+
+<%# Inline comments %>
+ <%#form accept-charset="UTF-8" action="users_path" method="post" > %>
+<!-- <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" > -->
+  <%# <label for="username">User Name </label> %>
+  <%# <input type="text" id="username" name="user[username]"><br><br> %>
+  <%# <label for="email">User Email</label> %>
+  <%# <input type="email" id="email" name="user[email]"><br><br> %>
+   <%# <label for="password">Password</label> %>
+  <%# <input type="password" id="password" name="user[password]"><br><br> %>
+  <%# <input type="submit" value="Submit"> %>
+<%# </form>  %>
+
+
+<%# if false comment %>
+<% if false %>
+<%=form_tag users_path do %> 
  <%= label_tag(:username, "User Name") %>
  <%= text_field_tag(:username)%>
  <%= label_tag(:email, "Email")%>
@@ -23,7 +27,8 @@
 
 <% end %>
 
--->
+<%end%>
+
 
 
 <ul>
