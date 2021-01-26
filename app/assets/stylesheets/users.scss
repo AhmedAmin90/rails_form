@@ -10,6 +10,7 @@ color: green;
 
 ul {
     text-align: center;
+    margin: 10px auto;
    
 }
 
@@ -19,6 +20,22 @@ li {
     text-align: center;
 }
 
+input {
+    height: 30px;
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+    width: 150px;
+    height: 35px;
+}
 .error-msgs{
+    color: red
+}
+
+
+// edit file
+
+span {
     color: red
 }
