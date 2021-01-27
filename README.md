@@ -1,24 +1,71 @@
-# README
+# Forms with rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In this project, I used multiple ways to build a form in rails that can send parameters to a controller so that it can build an instance of a model with those parameters. 
 
-Things you may want to cover:
+### By this form you can create new users and edit their information:
 
-* Ruby version
 
-* System dependencies
+## Create new user:
+![screenshot](./screen-shots/new-user.png)
 
-* Configuration
+## Validation in the form:
+![screenshot](./screen-shots/validation.png)
 
-* Database creation
+## Edit the user information:
+![screenshot](./screen-shots/edit-form.png)
 
-* Database initialization
+## Built With
 
-* How to run the test suite
+- Ruby 2.7.0
+- Ruby on Rails 2.7.0
 
-* Services (job queues, cache servers, search engines, etc.)
+### Setup
 
-* Deployment instructions
+1. To run this project locally, please ensure you have Ruby and Ruby on Rails installed on your machine.
+2. Open the terminal.
+3. Clone this repository by running:
 
-* ...
+```bash
+git clone https://github.com/AhmedAmin90/rails_form
+```
+
+
+4. Enter to the folder of the project in your local machine and After that write in the terminal:
+
+```bash
+bin/rails server
+```
+To run the server.
+
+5. Open http://localhost:3000/users/new to create new users or http://localhost:3000/users/:id/edit
+Where :id = the id number of the user.
+
+6. If you want to check the id number of the user you can write in the terminal:
+
+```bash
+bin/rails console
+```
+Then write User.all to see list of all users in the database as this screenshot:
+
+![screenshot](./screen-shots/users.png)
+
+### Author
+
+👤 **Ahmed Amin*
+
+- Github: [@AhmedAmin90](https://github.com/AhmedAmin90)
+- Twitter: [@AhmedAmin12383](https://twitter.com/AhmedAmin12383)
+- LinkedIn: [AhmedAmin](https://www.linkedin.com/in/web-developer)
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse
+- The Odin Project
+
+## 📝 License
+
+This project is [MIT](LICENSE) licensed.

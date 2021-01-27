@@ -1,0 +1,21 @@
+
+
+
+<ul>
+
+<%= form_for @user do |f|%>
+<h1> Edit  <span>' <%= @user.username %> ' </span>  Information </h1>
+<li> <%= f.label :username, "First Name"%> </li>
+<li> <%= f.text_field :username , placeholder: "Type your name here"%> </li>
+<li> <%= f.label :email, "Email"%> </li>
+<li> <%= f.text_field :email , placeholder: "example@example.com"%> </li>
+<li> <%= f.label :password, "Password"%> </li>
+<li> <%= f.password_field :password , placeholder: "Minimum 6 letters or numbers" %> </li>
+<li> <%= f.submit "Edit"%> </li>
+<%end%>
+</ul>
+  <ul>
+      <% @user.errors.full_messages.each do |error| %>
+      <li class="error-msgs"><%= error %></li>
+      <% end %>
+    </ul>

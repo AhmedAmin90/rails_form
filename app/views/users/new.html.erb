@@ -1,0 +1,44 @@
+<h1> New User Form</h1>
+
+
+<%# Inline comments %>
+ <%#form accept-charset="UTF-8" action="users_path" method="post" > %>
+<!-- <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" > -->
+  <%# <label for="username">User Name </label> %>
+  <%# <input type="text" id="username" name="user[username]"><br><br> %>
+  <%# <label for="email">User Email</label> %>
+  <%# <input type="email" id="email" name="user[email]"><br><br> %>
+   <%# <label for="password">Password</label> %>
+  <%# <input type="password" id="password" name="user[password]"><br><br> %>
+  <%# <input type="submit" value="Submit"> %>
+<%# </form>  %>
+
+<!-- <%=form_tag users_path do %> 
+ <%= label_tag(:username, "User Name") %>
+ <%= text_field_tag(:username)%>
+ <%= label_tag(:email, "Email")%>
+ <%= text_field_tag(:email)%>
+ <%= label_tag(:password, "Password")%>
+ <%= password_field_tag(:password)%>
+ <%= submit_tag("Sign Up") %>
+<%end%> -->
+
+
+<ul>
+
+<%= form_for @user do |f|%>
+<li> <%= f.label :username, "First Name"%> </li>
+<li> <%= f.text_field :username , placeholder: "Type your name here"%> </li>
+<li> <%= f.label :email, "Email"%> </li>
+<li> <%= f.text_field :email , placeholder: "example@example.com"%> </li>
+<li> <%= f.label :password, "Password"%> </li>
+<li> <%= f.password_field :password , placeholder: "Minimum 6 letters or numbers" %> </li>
+<li> <%= f.submit "Sign up"%> </li>
+<%end%>
+</ul>
+  <ul>
+      <% @user.errors.full_messages.each do |error| %>
+      <li class="error-msgs"><%= error %></li>
+      <% end %>
+    </ul>
+
